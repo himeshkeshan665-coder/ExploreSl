@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreSL Tours - Sri Lanka Tourism</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1a5490;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('https://th.bing.com/th/id/R.114401bca58c3729378f0251091ca5d2?rik=IVBioDMSXC0ZPw&riu=http%3a%2f%2fwww.srilankaembassybeirut.com%2fuserfiles%2fimage%2fgalle-1002-.jpg&ehk=DUjIbcMx5N1n9vfBSQQ9ddKhWIwIE5JlGP6AtyCgMRg%3d&risl=&pid=ImgRaw&r=0?w=1400') center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #69C5DA;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            color: #69C5DA;
+            background-color:#ffffff;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1a5490;
+        }
+
+        
+
+        /* Services Section */
+        .services {
+            background-color: #f4f4f4;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .service-box h3 {
+            color: #1a5490;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            color: #1a5490;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info strong {
+            color: #1a5490;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background-color: #69C5DA;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e55a2b;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a5490;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .about-content,
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="logo">🌴 ExploreSL Tours</div>
+            <nav>
+                <ul>
+                    <li><a href="#Index">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Destinations.html">Destinations</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div>
+                <h1>Discover Beautiful Sri Lanka</h1>
+                <p>Your Gateway to Paradise - Ancient Culture, Stunning Beaches & Wildlife</p>
+                <a href="Destinations.html" class="btn">Explorer Now</a>
+            </div>
+        </div>
+    </section>
+
+   
+
+    
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon">🚗</div>
+                    <h3>Transportation</h3>
+                    <p>Comfortable, air-conditioned vehicles with experienced drivers for all tours</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">🏨</div>
+                    <h3>Accommodation</h3>
+                    <p>Carefully selected hotels and guesthouses to suit your budget and preferences</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">👨‍🏫</div>
+                    <h3>Expert Guides</h3>
+                    <p>Licensed, English-speaking guides with extensive knowledge of Sri Lankan history and culture</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">🎫</div>
+                    <h3>All Inclusive Packages</h3>
+                    <p>Tour packages include entrance fees, meals, and all necessary arrangements</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">📸</div>
+                    <h3>Photography Tours</h3>
+                    <p>Special tours designed for photography enthusiasts with perfect timing and locations</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Travel Insurance</h3>
+                    <p>Complete travel insurance coverage included in all multi-day tour packages</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p><strong>Address:</strong><br>123 Galle Road, Colombo 03<br>Sri Lanka</p>
+                    <p><strong>Phone:</strong> +94 71 123 4567</p>
+                    <p><strong>Email:</strong> info@exploresl.com</p>
+                    <p><strong>WhatsApp:</strong> +94 71 123 4567</p>
+                    <p><strong>Office Hours:</strong><br>Monday - Saturday: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                    
+                    <h3 style="margin-top: 30px;">Follow Us</h3>
+                    <p>Facebook: @ExploreSLTours</p>
+                    <p>Instagram: @exploresl_tours</p>
+                    <p>Twitter: @ExploreSL</p>
+                </div>
+
+                <div>
+                    <h3>Send Us a Message</h3>
+                    <form onsubmit="return handleSubmit(event)">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="destination">Interested In</label>
+                            <input type="text" id="destination" name="destination" placeholder="e.g., Sigiriya Tour">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ExploreSL Tours. All Rights Reserved.</p>
+            <p>Website developed for educational purposes - HND Computing Project</p>
+            <p>Licensed Tour Operator | Sri Lanka Tourism Development Authority</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            
+            // Show success message
+            alert('Thank you ' + name + '! Your message has been received. We will contact you at ' + email + ' within 24 hours.');
+            
+            // Reset form
+            event.target.reset();
+            
+            return false;
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

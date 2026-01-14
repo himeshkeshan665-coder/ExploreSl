@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreSL Tours - Sri Lanka Tourism</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1a5490;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+     /* Destinations Grid */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .destination-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: #1a5490;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1a5490;
+        }
+ 
+  /* Footer */
+        footer {
+            background-color: #1a5490;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+</style>
+</head>
+<body>
+     <header>
+        <div class="header-content">
+            <div class="logo">🌴 ExploreSL Tours</div>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Index.html">Services</a></li>
+                    <li><a href="Index.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+ 
+<!-- Destinations Section -->
+    <section id="destinations" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2 class="section-title">Popular Destinations</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="C:\Users\HOME\Downloads\Tourism\Images\Sigiriya.jpg?w=400" alt="Sigiriya Rock">
+                    <div class="card-content">
+                        <h3>Sigiriya Rock </h3>
+                        <p>Discover Sri Lanka's most spectacular UNESCO World Heritage Site, where a 5th-century royal palace rises 200 meters above the jungle.</p>
+                        <div class="price">Central Province </div>
+                        <p><strong>Distric:</strong> Dambulla</p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <img src="C:\Users\HOME\Downloads\Tourism\Images\Ella.jpg?w=400" alt="Ella">
+                    <div class="card-content">
+                        <h3>Ella</h3>
+                        <p>Beautiful tea plantations, waterfalls, and the famous Nine Arch Bridge. Perfect for nature lovers and photographers.</p>
+                        <div class="price">Uva Province</div>
+                        <p><strong>Distric:</strong> Badulla</p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <img src="C:\Users\HOME\Downloads\Tourism\Images\Galle Fort.jpg?w=400" alt="Galle Fort">
+                    <div class="card-content">
+                        <h3>Galle Fort</h3>
+                        <p>Historic Dutch colonial fort by the sea. Explore cobblestone streets, museums, cafes, and stunning ocean views.</p>
+                        <div class="price">South Province</div>
+                        <p><strong>Distric:</strong> Galle</p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <img src="C:\Users\HOME\Downloads\Tourism\Images\Ambuluwawa.jpg?w=400" alt="Kandy">
+                    <div class="card-content">
+                        <h3>Ambuluwawa</h3>
+                        <p>Visit the sacred Temple of the Tooth, explore Royal Botanical Gardens, and experience traditional Kandyan dance.</p>
+                        <div class="price">Central Province</div>
+                        <p><strong>Distric:</strong>Kandy</p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <img src="C:\Users\HOME\Downloads\Tourism\Images\Yala.jpg?w=400" alt="Yala Safari">
+                    <div class="card-content">
+                        <h3>Yala Safari</h3>
+                        <p>Experience wildlife at its best! Spot leopards, elephants, sloth bears, and exotic birds in their natural habitat.</p>
+                        <div class="price">Uva Province</div>
+                        <p><strong>Distric:</strong> Hambanthota</p>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <img src="C:\Users\HOME\Downloads\Tourism\Images\Hortanplace.jpg?w=400" alt="Beach">
+                    <div class="card-content">
+                        <h3>Hortan Place</h3>
+                        <p>Horton Plains National Park lies in the central highlands of Sri Lanka, once known as Maha Eliya. Located about 20 kilometers south of Nuwara Eliya and 20 kilometers west of Haputale. </p>
+                        <div class="price">Central Province</div>
+                        <p><strong>Distric:</strong> Nuwaraeliya</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ExploreSL Tours. All Rights Reserved.</p>
+            <p>Website developed for educational purposes - HND Computing Project</p>
+            <p>Licensed Tour Operator | Sri Lanka Tourism Development Authority</p>
+        </div>
+    </footer>
+
+</body>
+</html>
